@@ -6,7 +6,7 @@ on:
     paths:
       - 'Dockerfile'
 env:
-  NAME: gcloud-psql
+  NAME: gcloud-psql-gcp-14
 
 jobs:
   build_and_push:
@@ -16,12 +16,12 @@ jobs:
     name: build and push
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: nais/platform-build-push-sign@main
         id: build-push-sign
         with:
-          name: ${{ env.NAME }}-gcp-14
-          google_service_account: gh-${{ env.NAME }}
+          name: ${{ env.NAME }}
+          google_service_account: gh-gcloud-psql
           workload_identity_provider: ${{ secrets.NAIS_IO_WORKLOAD_IDENTITY_PROVIDER }}
           push: true
