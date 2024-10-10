@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'Dockerfile'
 env:
   NAME: gcloud-psql-gcp-14
 
