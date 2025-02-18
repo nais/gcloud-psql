@@ -22,4 +22,6 @@ WORKDIR /db
 ENV CLOUDSDK_CORE_CUSTOM_CA_CERTS_FILE /etc/ssl/ca-bundle.pem 
 ENV HOME=/db
 
+COPY files/bash/*.sh /etc/profile.d/
+
 CMD ["sh", "-c", "tail -f /dev/null"]
