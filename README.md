@@ -1,2 +1,4 @@
 # gcloud-psql
-Docker image for gcloud and postgres operations
+Docker image with gcloud and postgres operations.
+
+Effectively the gcloud-sdk slim image with postgres client and a few other tools.

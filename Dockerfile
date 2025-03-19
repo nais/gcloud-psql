@@ -10,7 +10,7 @@ RUN apt-get -y update && apt-get install -y \
     postgresql-client-14 \
     postgresql-contrib-14
 
-RUN wget https://github.com/mikefarah/yq/releases/download/v4.27.2/yq_linux_amd64 -O /usr/local/bin/yq
+RUN wget https://github.com/mikefarah/yq/releases/download/v4.45.1/yq_linux_amd64 -O /usr/local/bin/yq
 RUN chmod 755 /usr/local/bin/yq
 
 RUN wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O /usr/local/bin/cloud_sql_proxy
